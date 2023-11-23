@@ -1,3 +1,4 @@
+<app-home></app-home>
 <h2>
     Reservation List
 </h2>
@@ -9,6 +10,9 @@
     Room Number : {{reservation.roomNumber}}<br>
     Check-In Date : {{reservation.checkInDate}}<br>
     Check-Out Date : {{reservation.checkOutDate}} <br>
+    Reservation Id : {{reservation.id}} <br>
+    <button (click)="deleteReservation(reservation.id)">Delete</button>
+    <button [routerLink]="['/edit',reservation.id]">Edit</button>
     
     </li>
 </ul>
